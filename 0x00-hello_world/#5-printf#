@@ -1,0 +1,11 @@
+include <stdio.h>
+/**
+ * main - Entry point
+ * prints message
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+printfilding a multilingual puzzle\n");
+return (0);
+}
