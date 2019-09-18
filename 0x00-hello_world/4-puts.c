@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	char puts(const char *"\"Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle\n");
 	return(0);
 }
