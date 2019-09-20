@@ -10,7 +10,7 @@ int n = 0;
 char str;
 while (n < 10)
 {
-putchar(n);
+putchar('0' + n);
 n++;
 }
 str = 'a';
