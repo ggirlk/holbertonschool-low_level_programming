@@ -11,12 +11,12 @@ while (n < 100)
 {
 if (n < 10)
 {
-putchar(0);
-putchar(n);
+putchar('0' + 0);
+putchar('0' + n);
 }
 else
 {
-putchar(n);
+putchar('0' + n);
 }
 putchar(',');
 putchar(' ');
