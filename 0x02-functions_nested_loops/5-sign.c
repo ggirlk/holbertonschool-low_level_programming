@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * function _print_sign
- *
+ * print_sign - test if the number is positive or not
+ *@n: the number to test
  * Return: 1 if variable is positive 0 if it's 0 and -1 if it's negative
  */
 int print_sign(int n)
