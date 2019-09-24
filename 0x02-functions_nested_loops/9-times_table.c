@@ -29,8 +29,11 @@ if (j != 9)
 _putchar(',');
 _putchar(' ');
 }
+else
+{
+_putchar('\n');
+}
 
 }
-_putchar('\n');
 }
 }
