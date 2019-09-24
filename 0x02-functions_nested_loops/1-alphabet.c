@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * print alphabet.
+ * print_alphabet - print alphabets.
+ *
+ * Return: nothing.
  */
 void print_alphabet(void)
 {
