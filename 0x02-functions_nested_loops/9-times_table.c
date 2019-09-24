@@ -2,7 +2,7 @@
 /**
  * times_table.
  *
- * return void
+ * print table
  */
 void times_table(void)
 {
@@ -26,7 +26,7 @@ _putchar('0' + m);
 }
 if (j == 9)
 {
-break;
+continue;
 }
 
 _putchar(',');
