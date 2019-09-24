@@ -1,6 +1,8 @@
 #include <stdio.h>
-#include "putchar.h"
-
+#include "holberton.h"
+/**
+ * print alphabet.
+ */
 void print_alphabet(void)
 {
 char str = 'a';
