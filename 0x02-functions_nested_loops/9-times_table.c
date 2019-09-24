@@ -18,7 +18,8 @@ k = m / 10;
 l = m % 10;
 _putchar('0' + k);
 _putchar('0' + l);
-} else
+}
+else
 {
 _putchar(' ');
 _putchar('0' + m);
