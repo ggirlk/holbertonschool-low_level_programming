@@ -20,6 +20,7 @@ _putchar('0' + k);
 _putchar('0' + l);
 } else
 {
+_putchar(' ');
 _putchar('0' + m);
 }
 if (j == 9)
