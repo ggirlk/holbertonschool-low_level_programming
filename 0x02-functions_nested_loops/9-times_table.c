@@ -24,13 +24,12 @@ else
 _putchar(' ');
 _putchar('0' + m);
 }
-if (j == 9)
+if (j != 9)
 {
-continue;
-}
-
 _putchar(',');
 _putchar(' ');
+}
+
 }
 _putchar('\n');
 }
