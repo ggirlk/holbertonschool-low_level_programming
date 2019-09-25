@@ -26,7 +26,7 @@ largest = c;
 }
 else
 {
-largest = a;
+printf("%d = %d = %d", a, b, c);
 }
 
 return (largest);
