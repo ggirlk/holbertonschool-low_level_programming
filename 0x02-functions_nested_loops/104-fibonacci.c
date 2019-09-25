@@ -23,7 +23,7 @@ else
 part1 = next / 100000000000;
 part2 = next % 1000000000000;
 printf("%lu", part1);
-printf("%ld", part2);
+printf("%lu", part2);
 }
 if (c == 98)
 break;
