@@ -20,13 +20,13 @@ else if (b > a && b > c)
 {
 largest = b;
 }
-else if (c > a && c > b)
+else if (a == b && a > c)
 {
-largest = c;
+largest = a;
 }
 else
 {
-printf("%d = %d = %d", a, b, c);
+largest = c;
 }
 
 return (largest);
