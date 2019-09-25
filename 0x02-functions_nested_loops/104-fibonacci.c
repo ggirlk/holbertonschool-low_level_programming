@@ -19,6 +19,9 @@ first = second;
 second = next;
 }
 printf("%d", next);
+if (c == 98)
+break;
+
 printf(",");
 printf(" ");
 }
