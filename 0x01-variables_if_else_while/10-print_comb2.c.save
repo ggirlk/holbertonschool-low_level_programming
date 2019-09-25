@@ -1,0 +1,29 @@
+#include <stdio.h>
+/**
+ * main - Entry point
+ * prints numbers from 00 to 99
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+int n = 0;
+while (n < 10)
+{
+putchar('0');
+putchar(n);
+putchar(', ');
+n++;
+}
+while (n <= 99)
+{
+putchar(n);
+while (n < 10)
+{
+putchar(n);
+n++;
+}
+n++;
+}
+putchar('\n');
+return (0);
+}

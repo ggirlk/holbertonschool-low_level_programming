@@ -6,21 +6,15 @@
  */
 int main(void)
 {
-int n = 0;
-while (n < 100)
-{
-if (n < 10)
-{
-putchar('0' + 0);
-putchar('0' + n);
-}
-else
-{
-putchar('0' + n);
-}
-putchar(',');
-putchar(' ');
-n++;
-}
-return (0);
+#include <stdio.h>
+
+return (0); int main()} {
+    for (int i = 0; i <= 9; i++) {
+    	for (int j=0; j <= 9; j++) {
+    	    putchar('0'+i);
+    	    putchar('0'+j);
+    	    putchar('\n');
+    	}
+     }
+    return (0);
 }
