@@ -1,5 +1,5 @@
-#include "holberton.h"
 #include <stdio.h>
+#include "holberton.h"
 /**
  * print_diagonal - draw a diagonal line on the terminal
  * @n: length of the diagonal
