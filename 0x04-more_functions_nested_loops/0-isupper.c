@@ -8,15 +8,12 @@
 int _isupper(int c)
 {
 int str;
-for (str = 'A'; str <= 'Z'; str++)
-{
-if (c == str)
+if (c >= 'A' str && c < 'Z')
 {
 return (1);
 }
 else
 {
 return (0);
-}
 }
 }
