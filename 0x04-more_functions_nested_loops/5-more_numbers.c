@@ -7,11 +7,18 @@
  */
 void more_numbers(void)
 {
-int str, i;
-for (str = 0; str <= 14; str++)
+int str, i, k;
+for (str = 0; str < 10; str++)
 {
-for (i = 0; i < 10; i++)
-_putchar('0' + i);
+for (i = 0; i <= 14; i++)
+{
+k = i % 10;
+if (i >= 10)
+_putchar('0' + 1);
+
+_putchar('0' + k);
+
 }
 _putchar('\n');
+}
 }
