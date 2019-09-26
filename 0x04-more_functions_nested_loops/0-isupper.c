@@ -7,7 +7,7 @@
  */
 int _isupper(int c)
 {
-char str;
+int str;
 int ret = 0;
 for (str = 'A'; str <= 'Z'; str++)
 {
