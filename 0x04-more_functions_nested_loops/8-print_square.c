@@ -1,22 +1,21 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- * print_diagonal - draw a diagonal line on the terminal
- *
+ * print_square - draw a diagonal line on the terminal
+ * @size: the size of the square
  * Return: nothing.
  */
-void print_diagonal(int n)
+void print_square(int size)
 {
 int str, j;
-if (n >= 0)
+if (size >= 0)
 {
-for (str = 0; str < n; str++)
+for (str = 0; str < size; str++)
 {
-for (j = 0; j < str; j++)
+for (j = 0; j < size; j++)
 {
-_putchar(' ');
+_putchar(35);
 }
-_putchar(92);
 _putchar('\n');
 }
 }
