@@ -8,13 +8,15 @@
 int _isupper(int c)
 {
 int str;
-int ret = 0;
 for (str = 'A'; str <= 'Z'; str++)
 {
 if (c == str)
 {
-ret = 1;
+return (1);
+}
+else
+{
+return (0);
 }
 }
-return (ret);
 }
