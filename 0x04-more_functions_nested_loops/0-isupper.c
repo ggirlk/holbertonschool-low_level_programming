@@ -5,7 +5,8 @@
  *@c: the character to test
  * Return: 0 or 1.
  */
-int _isupper(int c) {
+int _isupper(int c)
+{
 char str;
 int ret = 0;
 for (str = 'A'; str <= 'Z'; str++)
