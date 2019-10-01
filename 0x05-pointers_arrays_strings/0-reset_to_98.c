@@ -1,8 +1,10 @@
 #include "holberton.h"
-#include <stdio.h>
-
+/**
+ * reset_to_98 - reset n to 98.
+ * @n: the variable to be changing.
+ * Return: nothing.
+ */
 void reset_to_98(int *n)
 {
-int a = 98;
-*n = a;
+*n = 98;
 }
