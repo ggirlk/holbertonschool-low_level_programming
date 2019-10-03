@@ -9,18 +9,22 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-int i = 0, j = 0, ret = 0;
+int i = 0, j = 0, sm1 = 0, sm2 = 0, ret = 0;
 while (*(s1 + i))
+{
 i++;
-
+sm1 += *(s1 + i);
+}
 while (*(s2 + j))
+{
 j++;
-
-if (i - 1 < j - 1)
+sm2 += *(s2 + j);
+}
+if (sm1 < sm2)
 {
 ret = -15;
 }
-else if (i - 1 > j - 1)
+else if (sm1 > sm2)
 {
 ret = 15;
 }
