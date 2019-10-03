@@ -2,25 +2,25 @@
 #include <stdio.h>
 
 /**
- * *_strcat - concatenates two strings.
+ * *_strncat - concatenates two strings.
  * @dest: first string
  * @src: second string
+ * @n: nbr of chars to take from src
  * Return: the hole string.
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 int i = 0, j = 0;
 while (dest[i])
 i++;
 
-while (src[j])
+while (j < n && src[j] != '\0')
 {
 *(dest + i) = *(src + j);
-j++;
 i++;
+j++;
 }
-
 *(dest + i) = '\0';
 return (dest);
 }
