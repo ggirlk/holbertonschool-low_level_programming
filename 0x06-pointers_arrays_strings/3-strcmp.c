@@ -16,11 +16,11 @@ i++;
 while (*(s2 + j))
 j++;
 
-if (i < j)
+if (i - 1 < j - 1)
 {
 ret = -15;
 }
-else if (i > j)
+else if (i - 1 > j - 1)
 {
 ret = 15;
 }
