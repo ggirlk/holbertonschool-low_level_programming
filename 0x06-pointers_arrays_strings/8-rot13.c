@@ -14,7 +14,7 @@ char al2[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
 
 while (str[i])
 {
-    j = 0;
+j = 0;
 while (al1[j] && k == 0)
 {
 if (str[i] == al1[j])
