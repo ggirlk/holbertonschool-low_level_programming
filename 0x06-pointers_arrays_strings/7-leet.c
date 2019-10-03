@@ -9,12 +9,8 @@
 char *leet(char *str)
 {
 int i = 0;
-//char a, b;
 while (str[i])
 {
-/*a = 'a';
-b = 'A';*/
-
 if (str[i] == 'a' || str[i] == 'A')
 {
 str[i] = '4';
