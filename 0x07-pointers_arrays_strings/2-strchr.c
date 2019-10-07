@@ -17,7 +17,7 @@ while (s[i])
 {
 if (s[i] == c)
 {
-ch = &s[i - 1];
+ch = &s[i];
 }
 i++;
 }
