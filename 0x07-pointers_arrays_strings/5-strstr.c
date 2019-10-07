@@ -24,7 +24,7 @@ j++;
 }
 else
 {
-break;
+continue;
 }
 }
 
