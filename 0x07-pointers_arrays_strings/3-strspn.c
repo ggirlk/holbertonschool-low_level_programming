@@ -8,21 +8,25 @@
  *
  * Return: char.
  */
-unsigned int _strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept) 
 {
-unsigned int i = 0, k = 0;
+unsigned int i = 0, j = 0, k = 0;
 
 while (s[i])
 {
-if (s[i] == accept[0])
+k = 0;
+while (accept[j])
 {
-break;
+if (s[i] == accept[j])
+k = 1;
+
+j++;
 }
-k++;
+j = 0;
+if (k == 0)
+break;
+
 i++;
 }
-if (k != 0)
-k++;
-
-return (k);
+return (i);
 }
