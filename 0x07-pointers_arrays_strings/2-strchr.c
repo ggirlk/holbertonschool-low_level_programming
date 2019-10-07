@@ -16,13 +16,13 @@ while (*s)
 if (*s == c)
 {
 k = 1;
-return s;
+return (s);
 }
 s++;
 }
 if (k == 0)
 {
-return (NULL);
+return ("NULL");
 }
 return ('\0');
 }
