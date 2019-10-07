@@ -10,19 +10,19 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int i = 0;
+unsigned int i = 0, k = 0;
 
-while (*s)
+while (s[i])
 {
-if (*s == *accept)
+if (s[i] == accept[0])
 {
 break;
 }
+k++;
 i++;
-s++;
 }
-if (i != 0)
-i++;
+if (k != 0)
+k++;
 
-return (i);
+return (k);
 }
