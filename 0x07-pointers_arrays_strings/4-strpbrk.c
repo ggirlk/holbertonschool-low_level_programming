@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strspn - gets the length of a prefix substring
+ * _strpbrk - gets the length of a prefix substring
  * @s: string given
  * @accept: searchen character
  *
@@ -10,21 +10,26 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-int i = j = k = 0;
-char *str;
+
+int i = 0, j = 0, k;
 
 while (s[i])
 {
 k = 0;
-while (accept[j])
+while(accept[j])
 {
 if (s[i] == accept[j])
-return (&s[i]);
+k = 1;
 
 j++;
 }
 j = 0;
+if (k == 1)
+return (s + i);
 i++;
 }
+if (k == 0)
+return (NULL);
 
+return ('\0');
 }
