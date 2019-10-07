@@ -4,7 +4,7 @@
 /**
  * _strspn - gets the length of a prefix substring
  * @s: string given
- * @c: searchen character
+ * @accept: searchen character
  *
  * Return: char.
  */
@@ -21,5 +21,8 @@ break;
 i++;
 s++;
 }
-return (i + 1);
+if (i != 0)
+i++;
+
+return (i);
 }
