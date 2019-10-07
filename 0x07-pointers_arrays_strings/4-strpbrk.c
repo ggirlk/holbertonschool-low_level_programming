@@ -16,7 +16,7 @@ int i = 0, j = 0, k;
 while (s[i])
 {
 k = 0;
-while(accept[j])
+while (accept[j])
 {
 if (s[i] == accept[j])
 k = 1;
