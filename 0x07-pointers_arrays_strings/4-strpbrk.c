@@ -8,9 +8,10 @@
  *
  * Return: char.
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-unsigned int i = 0, j = 0, k = 0;
+int i = j = k = 0;
+char *str;
 
 while (s[i])
 {
@@ -18,15 +19,12 @@ k = 0;
 while (accept[j])
 {
 if (s[i] == accept[j])
-k = 1;
+return (&s[i]);
 
 j++;
 }
 j = 0;
-if (k == 0)
-break;
-
 i++;
 }
-return (i);
+
 }
