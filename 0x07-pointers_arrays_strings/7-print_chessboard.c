@@ -1,10 +1,9 @@
 #include "holberton.h"
 
-
 /**
  * print_chessboard - prints a chessboard
- * @a: chessboard value
- * Return: none
+ * @a: board
+ * Return: nothing
  */
 
 void print_chessboard(char (*a)[8])
@@ -18,8 +17,6 @@ _putchar(a[i][j]);
 
 if (j == 7)
 _putchar('\n');
-
 }
-
 }
 }
