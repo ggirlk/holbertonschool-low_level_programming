@@ -2,12 +2,11 @@
 #include <stdio.h>
 
 /**
- * _pow_recursion - returns the value of x raised to the power of y.
- * @x: number
- * @y: number
+ * _sqrt_recursion - returns the natural square root of a number.
+ * @n: number
  * Return: int.
  */
-int counter (int i, int n);
+
 int _sqrt_recursion(int n)
 {
 if (n == 0)
@@ -28,8 +27,14 @@ return (counter(1, n));
 }
 }
 
+/**
+ * counter - count sqrt
+ * @i: number
+ * @n: number
+ * Return: sqrt
+ */
 
-int counter (int i, int n)
+int counter(int i, int n)
 {
 if (i * i == n)
 return (i);
