@@ -2,44 +2,25 @@
 #include <stdio.h>
 
 /**
- * _sqrt_recursion - returns the natural square root of a number.
+ * is_prime_number - test if th number is primary or no.
  * @n: number
  * Return: int.
  */
+int primeCounter(int k, int n);
+int is_prime_number(int n)
+{
+return (primeCounter(2, n));
+}
 
-int _sqrt_recursion(int n)
+int primeCounter(int k, int n)
 {
-if (n == 0)
+if (k < n && n % k == 0)
+return (0);
+else if (k < n && n % k != 0)
+return (1);
+else
 {
+primeCounter(2 + 1, n);
 return (0);
 }
-else if (n == 1)
-{
-return (1);
-}
-else if (n < 0)
-{
-return (-1);
-}
-else
-{
-return (counter(1, n));
-}
-}
-
-/**
- * counter - count sqrt
- * @i: number
- * @n: number
- * Return: sqrt
- */
-
-int counter(int i, int n)
-{
-if (i * i == n)
-return (i);
-else if (n > i * i)
-return (counter(i + 1, n));
-else
-return (-1);
 }
