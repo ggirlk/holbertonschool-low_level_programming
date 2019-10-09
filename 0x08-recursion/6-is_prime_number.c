@@ -6,7 +6,7 @@
  * @n: number
  * Return: int.
  */
-int primeCounter(int k, int n);
+
 int is_prime_number(int n)
 {
 return (primeCounter(2, n));
