@@ -8,11 +8,25 @@
  */
 int is_palindrome(char *s)
 {
-int l = 0;
-while (*(s + l) != '\0')
-l++;
+int l = _strlen_recursion(s);
 
-return (palindromeCounter(l - 1, 0,s));
+return (palindromeCounter(l - 1, 0, s));
+}
+/**
+ * _strlen_recursion - length of a string.
+ * @s: string
+ * Return: string length.
+ */
+int _strlen_recursion(char *s)
+{
+int l;
+if (*s == '\0')
+{
+return (0);
+}
+s++;
+l = _strlen_recursion(s) + 1;
+return (l);
 }
 /**
  * palindromeCounter - count and test chars.
@@ -28,7 +42,7 @@ return (1);
 if (i == l)
 return (1);
 if (*(s + l) == *(s + i))
-return (palindromeCounter(l - 1,i + 1,s));
+return (palindromeCounter(l - 1, i + 1, s));
 
 return (0);
 }
