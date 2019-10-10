@@ -19,15 +19,17 @@ return (primeCounter(2, n));
  */
 int primeCounter(int k, int n)
 {
-if (k < n && n % k == 0)
-return (0);
-else if (k < n && n % k != 0)
-return (1);
-else if (n == 0)
-return (-1);
-else
+if (k < n)
 {
-primeCounter(2 + 1, n);
+if (n % k == 0)
+{
 return (0);
 }
+else
+{
+primeCounter(k + 1, n);
+return (1);
+}
+}
+return (0);
 }
