@@ -14,7 +14,7 @@ return (primeCounter(2, n));
 /**
  * primeCounter - test if it is primary or no
  * @k: counter
- * @n number
+ * @n: number
  * Return: int
  */
 int primeCounter(int k, int n)
