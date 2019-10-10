@@ -11,9 +11,8 @@ int is_palindrome(char *s)
 int l = 0;
 while (*(s + l) != '\0')
 l++;
-return (palindromeCounter(l - 1, 0,s));
 
-return (0);
+return (palindromeCounter(l - 1, 0,s));
 }
 /**
  * palindromeCounter - count and test chars.
@@ -24,9 +23,9 @@ return (0);
  */
 int palindromeCounter(int l, int i, char *s)
 {
-if (i == l)
-return (1);
 if (l == 1)
+return (1);
+if (i == l)
 return (1);
 if (*(s + l) == *(s + i))
 return (palindromeCounter(l - 1,i + 1,s));
