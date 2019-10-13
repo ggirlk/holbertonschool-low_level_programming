@@ -25,13 +25,12 @@ return (1);
 
 /**
  * _isdigit - check if the char is digit or not.
- *@c: the character to test
+ * @c: the character to test
  * Return: 0 or 1.
  */
 int _isdigit(int c)
 {
-int n;
-int ret = 0;
+int n, ret = 0;
 for (n = '0'; n <= '9'; n++)
 {
 if (c == n)
