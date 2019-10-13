@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <ctype.h>
 /**
  * main - prints sum of int args or error
  * @argc: number of command line arguments
@@ -8,12 +9,12 @@
  */
 int main(int argc, char **argv)
 {
-int k = 0, a, i, r;
+int k = 0, a, i, r = 0;
 if (argc >= 2)
 {
 for (i = 1; i < argc; i++)
 {
-if (_isdigit(*argv[i]) == 1)
+if (_isdigit(*argv[i]) == 1 && _strlen_recursion(argv[i]) < 11)
 {
 a = _atoi(argv[i]);
 r += a;
@@ -29,6 +30,7 @@ return (1);
 else
 {
 printf("0\n");
+return (1);
 }
 if (k == 0)
 printf("%d\n", r);
@@ -75,4 +77,21 @@ if (k == 1)
 return (ret * -1);
 
 return (ret);
+}
+
+/**
+ * _strlen_recursion - length of a string.
+ * @s: string
+ * Return: string length.
+ */
+int _strlen_recursion(char *s)
+{
+int l;
+if (*s == '\0')
+{
+return (0);
+}
+s++;
+l = _strlen_recursion(s) + 1;
+return (l);
 }

@@ -19,8 +19,9 @@ printf("%d\n", r);
 else
 {
 printf("Error\n");
-}
 return (1);
+}
+return (0);
 }
 
 /**
