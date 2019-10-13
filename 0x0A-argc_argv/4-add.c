@@ -4,7 +4,7 @@
  * main - prints sum of int args or error
  * @argc: number of command line arguments
  * @argv: array containing the program command line argument
- * Return: 1;
+ * Return: 0 or 1;
  */
 int main(int argc, char **argv)
 {
@@ -22,6 +22,7 @@ else
 {
 k = 1;
 printf("Error\n");
+return (1);
 }
 }
 }
@@ -32,7 +33,7 @@ printf("0\n");
 if (k == 0)
 printf("%d\n", r);
 
-return (1);
+return (0);
 }
 
 /**
