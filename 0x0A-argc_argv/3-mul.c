@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * main - prints a arg1 * arg 2 or error
  * @argc: number of command line arguments
@@ -14,7 +13,7 @@ if (argc >= 2)
 {
 a = _atoi(argv[1]);
 b = _atoi(argv[2]);
-r = a * b;
+r = a *b;
 printf("%d\n", r);
 }
 else
@@ -47,7 +46,7 @@ return (ret);
  * @s: string;
  * Return: int;
  */
-int _atoi(char* s)
+int _atoi(char *s)
 {
 int i, k = 0, ret = 0;
 
