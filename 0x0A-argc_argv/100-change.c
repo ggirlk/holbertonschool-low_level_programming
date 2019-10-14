@@ -15,7 +15,7 @@ if (argc == 2)
 a = _atoi(argv[1]);
 if (a <= 0)
 {
-printf("Error\n");
+printf("0\n");
 return (1);
 }
 for (i = 0; i < 5; i++)
