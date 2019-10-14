@@ -13,6 +13,11 @@ int a, b, i, r = 0, coins[] = {25, 10, 5, 2, 1};
 if (argc == 2)
 {
 a = _atoi(argv[1]);
+if (a <= 0)
+{
+printf("Error\n");
+return (1);
+}
 for (i = 0; i < 5; i++)
 {
 if (a >= coins[i])

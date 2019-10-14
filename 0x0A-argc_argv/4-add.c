@@ -9,31 +9,30 @@
  */
 int main(int argc, char **argv)
 {
-int k = 0, a, i, r = 0;
+int a, i, r = 0;
+
 if (argc >= 2)
 {
 for (i = 1; i < argc; i++)
 {
-if (_isdigit(*argv[i]) == 1 && _strlen_recursion(argv[i]) < 11)
+if(_isdigit(*argv[i]) && _strlen_recursion(argv[i]) < 11)
 {
 a = _atoi(argv[i]);
 r += a;
 }
 else
 {
-k = 1;
 printf("Error\n");
 return (1);
 }
 }
+printf("%d\n", r);
 }
 else
 {
 printf("0\n");
 return (1);
 }
-if (k == 0)
-printf("%d\n", r);
 
 return (0);
 }
