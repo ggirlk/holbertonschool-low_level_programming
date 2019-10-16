@@ -18,6 +18,8 @@ return (NULL);
 l = _strlen_recursion(str);
 
 arr = malloc(sizeof(char) * l);
+if (arr == NULL)
+return (NULL);
 
 for (i = 0; i < l; i++)
 {
@@ -34,11 +36,23 @@ if (k == 1)
 {
 f = 0;
 arr[m] = malloc(sizeof(char) * j);
+if (arr[m] == NULL)
+{
+while (m >= 0)
+{
+free(arr[m]);
+m--;
+}
+free(arr);
+return (NULL);
+}
 for (h = d; h <= i; h++)
 {
 arr[m][f] = str[h];
 f++;
 }
+arr[m][f] = ' ';
+f++;
 arr[m][f] = '\0';
 m++;
 }
