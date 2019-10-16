@@ -10,51 +10,62 @@
  */
 char **strtow(char *str)
 {
-int i, j = 0, l = 0, k = 0;
+int i, j = 0, l = 0, k = 0, m = 0;
 char **arr;
 if (*str == '\0' || str == NULL)
 return (NULL);
 
-l = _strlen(str);
-
+l = _strlen_recursion(str);
 arr = malloc(sizeof(char) * l);
-
-if (arr == NULL)
-return (NULL);
 
 for (i = 0; i < l; i++)
 {
 k = 0;
+j = 0;
 while (str[i] != ' ')
 {
-arr[j][k] = str[i];
-k++;
-}
-if (arr[j] != NULL)
+k = 1;
 j++;
-i += k;
+i++;
 }
+if (k == 1)
+{
+arr[m] = malloc(sizeof(char) * j);
+m++;
+}
+}
+
+m = 0;
+for (i = 0; i < l; i++)
+{
+j = 0;
+k = 0;
+while (str[i] != ' ')
+{
+k = 1;
+arr[m][j] = str[i];
+i++;
+j++;
+}
+if (k == 1)
+m++;
+}
+
 return (arr);
 }
 /**
- * _strlen - length of a string without spaces.
+ * _strlen_recursion - length of a string.
  * @s: string
  * Return: string length.
  */
-int _strlen(char *s)
+int _strlen_recursion(char *s)
 {
-int i = 0, l = 0;
+int l;
 if (*s == '\0')
 {
 return (0);
 }
-while (s[i] != '\0')
-{
-if (s[i] != ' ')
-l++;
-
-i++;
-}
-
+s++;
+l = _strlen_recursion(s) + 1;
 return (l);
 }
