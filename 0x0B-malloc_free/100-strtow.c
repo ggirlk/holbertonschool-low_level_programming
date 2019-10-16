@@ -15,9 +15,10 @@ char **arr;
 if (*str == '\0' || str == NULL)
 return (NULL);
 
-l = _strlen_recursion(str);
+l = _strlen(str);
 
 arr = malloc(sizeof(char) * l);
+
 if (arr == NULL)
 return (NULL);
 
@@ -36,18 +37,24 @@ i += k;
 return (arr);
 }
 /**
- * _strlen_recursion - length of a string.
+ * _strlen - length of a string without spaces.
  * @s: string
  * Return: string length.
  */
-int _strlen_recursion(char *s)
+int _strlen(char *s)
 {
-int l;
+int i = 0, l = 0;
 if (*s == '\0')
 {
 return (0);
 }
-s++;
-l = _strlen_recursion(s) + 1;
+while (s[i] != '\0')
+{
+if (s[i] != ' ')
+l++;
+
+i++;
+}
+
 return (l);
 }
