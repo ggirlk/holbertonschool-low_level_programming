@@ -35,24 +35,21 @@ j++;
 if (k == 1)
 {
 f = 0;
-arr[m] = malloc(sizeof(char) * j);
+arr[m] = malloc(sizeof(char) * (j + 1));
 if (arr[m] == NULL)
 {
-while (m >= 0)
+while (m <= 0)
 {
 free(arr[m]);
 m--;
 }
-free(arr);
 return (NULL);
 }
-for (h = d; h <= i; h++)
+for (h = d; h < i; h++)
 {
 arr[m][f] = str[h];
 f++;
 }
-arr[m][f] = ' ';
-f++;
 arr[m][f] = '\0';
 m++;
 }
