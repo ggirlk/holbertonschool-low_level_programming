@@ -13,6 +13,8 @@ char *argstostr(int ac, char **av)
 {
 int i, j = 0, l = 0, k = 0;
 char *str;
+if (ac == 0 || av == NULL)
+return (NULL);
 for (j = 0; j < ac; j++)
 l += _strlen_recursion(av[j]) + 1;
 str = malloc(sizeof(char) * l);
