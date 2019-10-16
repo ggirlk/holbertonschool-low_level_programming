@@ -19,7 +19,7 @@ nstr = malloc(sizeof(char) * l);
 if (nstr == NULL)
 return (NULL);
 
-for(i = 0; i < l; i++)
+for (i = 0; i <= l; i++)
 nstr[i] = str[i];
 
 return (nstr);
