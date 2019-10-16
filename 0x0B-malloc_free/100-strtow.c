@@ -16,6 +16,8 @@ if (*str == '\0' || str == NULL)
 return (NULL);
 
 l = _strlen_recursion(str);
+if (l == 0)
+return (NULL);
 
 arr = malloc(sizeof(char) * l);
 if (arr == NULL)
@@ -50,7 +52,7 @@ for (h = d; h < i; h++)
 arr[m][f] = str[h];
 f++;
 }
-arr[m][f] = '\0';
+arr[m][f + 1] = '\0';
 m++;
 }
 arr[m] = NULL;
