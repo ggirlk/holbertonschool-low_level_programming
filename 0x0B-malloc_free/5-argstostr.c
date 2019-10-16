@@ -16,7 +16,7 @@ char *str;
 for (j = 0; j < ac; j++)
 l += _strlen_recursion(av[j]) + 1;
 str = malloc(sizeof(char) * l);
-if (str != NULL)
+if (str == NULL)
 return (NULL);
 for (j = 0; j < ac; j++)
 {
