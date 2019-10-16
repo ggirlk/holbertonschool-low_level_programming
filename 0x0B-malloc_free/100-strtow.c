@@ -12,7 +12,7 @@ char **strtow(char *str)
 {
 int i, j = 0, l = 0, k = 0, m = 0, d = 0, f = 0, h = 0;
 char **arr;
-if (*str == '\0' || str == NULL)
+if (str[0] == '\0' || str == NULL)
 return (NULL);
 
 l = _strlen_recursion(str);
@@ -37,7 +37,7 @@ j++;
 if (k == 1)
 {
 f = 0;
-arr[m] = malloc(sizeof(char) * (j + 1));
+arr[m] = malloc(sizeof(char) * j);
 if (arr[m] == NULL)
 {
 while (m <= 0)
