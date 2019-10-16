@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory;
+ * str_concat - returns a pointer to a newly allocated space in memory;
  * @s1: 1st string
  * @s2: 2nd string
  * Return: pointer to a new string;.
