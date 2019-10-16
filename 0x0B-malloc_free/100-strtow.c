@@ -14,8 +14,13 @@ int i, j = 0, l = 0, k = 0;
 char **arr;
 if (*str == '\0' || str == NULL)
 return (NULL);
+
 l = _strlen_recursion(str);
+
 arr = malloc(sizeof(char) * l);
+if (arr == NULL)
+return (NULL);
+
 for (i = 0; i < l; i++)
 {
 k = 0;
@@ -24,8 +29,9 @@ while (str[i] != ' ')
 arr[j][k] = str[i];
 k++;
 }
-i += k;
+if (arr[j] != NULL)
 j++;
+i += k;
 }
 return (arr);
 }
