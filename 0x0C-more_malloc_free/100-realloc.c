@@ -50,17 +50,11 @@ return (ptr2);
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-unsigned int i = 0, j = 0;
-char **str = &dest;
-char **strc = &src;
-while (i < n && str[i])
+unsigned int i = 0;
+while (i < n && src[i])
 {
-while (j < n && str[i])
-{
-str[i][j] = strc[i][j];
-j++;
-}
+dest[i] = src[i];
 i++;
 }
-return (*str);
+return (dest);
 }
