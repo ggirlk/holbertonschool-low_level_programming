@@ -13,14 +13,15 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *str;
-unsigned int l = _strlen_recursion(s1);
-unsigned int l2 = _strlen_recursion(s2);
-unsigned int i = 0, j = 0;
-unsigned int n2 = n;
+unsigned int l, l2, i = 0, j = 0, n2 = n;
+
+l = _strlen_recursion(s1);
+l2 = _strlen_recursion(s2);
+
 if (n >= l2)
 n2 = l2;
 
-str = malloc(sizeof(char) * (l + n2));
+str = malloc(sizeof(char) * (l + n2 - 1));
 
 if (str == NULL)
 return (NULL);
