@@ -16,6 +16,7 @@ char *str;
 unsigned int l, l2, i = 0, j = 0, n2 = n;
 if (s1 == NULL)
 s1 = "";
+
 if (s2 == NULL)
 s2 = "";
 
@@ -25,13 +26,14 @@ l2 = _strlen_recursion(s2);
 if (n >= l2)
 n2 = l2;
 
-str = malloc(sizeof(str) * (l + n2));
+str = malloc(sizeof(str) * (l + n2 + 1));
 
 if (str == NULL)
 {
 free(str);
 return (NULL);
 }
+
 for (i = 0; i < (l + n2); i++)
 {
 if (i < l)
