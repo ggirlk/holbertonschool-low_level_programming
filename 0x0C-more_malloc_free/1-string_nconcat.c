@@ -14,6 +14,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *str;
 unsigned int l, l2, i = 0, j = 0, n2 = n;
+if (_strlen_recursion(s1) == 0)
+s1 = "";
+if (_strlen_recursion(s2) == 0)
+s1 = "";
 
 l = _strlen_recursion(s1);
 l2 = _strlen_recursion(s2);
