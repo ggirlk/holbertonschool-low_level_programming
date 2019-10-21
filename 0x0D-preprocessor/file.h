@@ -1,3 +1,3 @@
-#ifndef FILE
-#define FILE __FILE__
+#ifndef PROGFILE
+#define PROGFILE (__FILE__)
 #endif

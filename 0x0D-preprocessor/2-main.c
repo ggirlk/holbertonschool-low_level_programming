@@ -8,6 +8,6 @@
  */
 int main(void)
 {
-printf("%s\n", FILE);
+printf("%s\n", PROGFILE);
 return (0);
 }
