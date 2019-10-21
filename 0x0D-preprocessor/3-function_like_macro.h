@@ -1,3 +1,3 @@
-#ifndef ABS_A
-#define ABS(a) ((a) < 0? (a) * (-1) : (a))
+#ifndef ABS_X
+#define ABS(x) ((x) < 0? (x) * (-1) : (x))
 #endif
