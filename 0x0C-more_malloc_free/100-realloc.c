@@ -16,9 +16,10 @@ void *ptr2;
 
 if (ptr == NULL)
 {
-ptr2 = malloc(new_size);
+ptr2 = malloc(new_size + 1);
 if (ptr2 == NULL)
 {
+free(ptr2);
 free(ptr);
 return (NULL);
 }
@@ -33,7 +34,10 @@ return (NULL);
 }
 ptr2 = malloc(new_size);
 if (ptr2 == NULL)
+{
+free(ptr);
 return (NULL);
+}
 if (new_size > old_size)
 _memcpy(ptr2, ptr, old_size);
 
