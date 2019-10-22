@@ -11,14 +11,24 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-struct dog *my_new_dog;
-my_new_dog = malloc(sizeof(struct dog));
+dog_t *my_new_dog = malloc(sizeof(dog_t));
+int i = 0;
 if (my_new_dog == NULL)
 return (NULL);
-
-my_new_dog->name = name;
+my_new_dog->name = malloc(sizeof(name));
+while(name[i])
+{
+my_new_dog->name[i] = name[i];
+i++;
+}
 my_new_dog->age = age;
-my_new_dog->owner = owner;
+i = 0;
+my_new_dog->owner = malloc(sizeof(owner));
+while(owner[i])
+{
+my_new_dog->owner[i] = owner[i];
+i++;
+}
 
 return (my_new_dog);
 }
