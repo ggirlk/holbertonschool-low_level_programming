@@ -38,9 +38,12 @@ return (NULL);
 for (i = 0; name[i]; i++)
 {
 name1[i] = name[i];
-owner1[i] = owner[i];
 }
 name1[i] = '\0';
+for (i = 0; owner[i]; i++)
+{
+owner1[i] = owner[i];
+}
 owner1[i] = '\0';
 my_new_dog->age = age;
 my_new_dog->name = name1;
