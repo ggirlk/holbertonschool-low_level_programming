@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "dog.h"
 
 /**
@@ -15,8 +16,8 @@ dog_t *my_new_dog = malloc(sizeof(dog_t));
 int i = 0;
 if (my_new_dog == NULL)
 return (NULL);
-my_new_dog->name = malloc(sizeof(name));
-my_new_dog->owner = malloc(sizeof(owner));
+my_new_dog->name = malloc(strlen(name) + 1);
+my_new_dog->owner = malloc(strlen(owner) + 1);
 if (my_new_dog->name == NULL || my_new_dog->owner == NULL)
 {
 free(my_new_dog->name);
