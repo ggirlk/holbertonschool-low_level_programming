@@ -16,30 +16,28 @@ int i = 0;
 if (my_new_dog == NULL)
 return (NULL);
 my_new_dog->name = malloc(sizeof(name));
-if (my_new_dog->name == NULL)
+my_new_dog->owner = malloc(sizeof(owner));
+if (my_new_dog->name == NULL || my_new_dog->owner == NULL)
 {
+free(my_new_dog->name);
+free(my_new_dog->owner);
 free(my_new_dog);
 return (NULL);
 }
-while (name[i])
+while (name[i] != '\0')
 {
 my_new_dog->name[i] = name[i];
 i++;
 }
+my_new_dog->name[i] = '\0';
 my_new_dog->age = age;
 i = 0;
-my_new_dog->owner = malloc(sizeof(owner));
-if (my_new_dog->owner == NULL)
-{
-free(my_new_dog->name);
-free(my_new_dog);
-return (NULL);
-}
-while (owner[i])
+while (owner[i] != '\0')
 {
 my_new_dog->owner[i] = owner[i];
 i++;
 }
+my_new_dog->owner[i] = '\0';
 
 return (my_new_dog);
 }
