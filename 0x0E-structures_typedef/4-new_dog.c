@@ -16,7 +16,9 @@ int i = 0;
 if (my_new_dog == NULL)
 return (NULL);
 my_new_dog->name = malloc(sizeof(name));
-while(name[i])
+if (my_new_dog->name == NULL)
+return (NULL);
+while (name[i])
 {
 my_new_dog->name[i] = name[i];
 i++;
@@ -24,7 +26,9 @@ i++;
 my_new_dog->age = age;
 i = 0;
 my_new_dog->owner = malloc(sizeof(owner));
-while(owner[i])
+if (my_new_dog->owner == NULL)
+return (NULL);
+while (owner[i])
 {
 my_new_dog->owner[i] = owner[i];
 i++;
