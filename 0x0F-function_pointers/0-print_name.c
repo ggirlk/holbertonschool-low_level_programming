@@ -4,12 +4,12 @@
 /**
  * print_name - prints a name
  * @name: name of the person
- *
+ * @f: pointer to a fun
  * Return: Nothing.
  */
 void print_name(char *name, void (*f)(char *))
 {
-if (name == NULL)
+if (f == NULL || name == NULL)
 return;
 f(name);
 }
