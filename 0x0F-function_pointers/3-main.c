@@ -3,7 +3,8 @@
 #include "3-calc.h"
 /**
  * main - check the code for Holberton School students.
- *
+ * @argc: size of argv
+ * @argv: array of arguments
  * Return: Always 0.
  */
 int main(int argc, char **argv)

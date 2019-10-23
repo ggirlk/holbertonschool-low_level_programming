@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include<string.h>
 #include "3-calc.h"
 /**
  * get_op_func - performs simple operations
@@ -21,7 +22,7 @@ op_t ops[] = {
 int i = 0;
 while (s && ops[i].op != NULL)
 {
-if (ops[i].op == s)
+if (strcmp(ops[i].op, s) == 0)
 return (ops[i].f);
 
 i++;
