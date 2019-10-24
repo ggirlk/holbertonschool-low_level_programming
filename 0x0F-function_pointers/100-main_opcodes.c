@@ -10,22 +10,23 @@
  */
 int main(int argc, char **argv)
 {
-int ar = atoi(argv[1]), i;
+int ar, i;
 char *m = (char *) main;
-if (ar < 0)
-{
-printf("Error\n");
-exit(2);
-}
 if (argc != 2)
 {
 printf("Error\n");
 exit(1);
 }
-for (i = ar; i > 0; i--)
+if (ar < 0)
 {
-printf("%x", *m++ & 0xff);
-if (i > 1)
+printf("Error\n");
+exit(2);
+}
+ar = atoi(argv[1]);
+for (i = 0; i < ar; i++)
+{
+printf("%02x", *m++ & 0xff);
+if (i <ar - 1)
 printf(" ");
 }
 printf("\n");
