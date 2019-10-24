@@ -12,15 +12,15 @@ int main(int argc, char **argv)
 {
 int ar = atoi(argv[1]), i;
 char *m = (char *) main;
+if (ar < 0)
+{
+printf("Error\n");
+exit(2);
+}
 if (argc != 2)
 {
 printf("Error\n");
 exit(1);
-}
-if (ar < 0)
-{
-printf("Error0\n");
-exit(2);
 }
 for (i = ar; i > 0; i--)
 {
