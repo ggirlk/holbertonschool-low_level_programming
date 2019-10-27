@@ -5,25 +5,25 @@
 /**
  * print_char - print char
  * @args: list of args
- * return: int
+ * Return: int
  */
 int print_char(va_list args)
 {
 return (printf("%c", va_arg(args, int)));
 }
 /**
- * print_char - print int
+ * print_int - print int
  * @args: list of args
- * return: int
+ * Return: int
  */
 int print_int(va_list args)
 {
 return (printf("%d", va_arg(args, int)));
 }
 /**
- * print_char - print string
+ * print_string - print string
  * @args: list of args
- * return: int
+ * Return: int
  */
 int print_string(va_list args)
 {
@@ -31,12 +31,12 @@ char *str = va_arg(args, char *);
 if (!str)
 str = "(nil)";
 
-return (printf("(nil)"));
+return (printf("%s", str));
 }
 /**
- * print_char - print float
+ * print_float - print float
  * @args: list of args
- * return: int
+ * Return: int
  */
 int print_float(va_list args)
 {
@@ -44,8 +44,7 @@ return (printf("%f", va_arg(args, double)));
 }
 /**
  * print_all - prints anything
- * @separator: string to be printed between the strings
- * @n: number of strings
+ * @format: list of types of arguments
  *
  * Return: nothing
  */
@@ -61,14 +60,16 @@ _print prints[] = {
 };
 unsigned int i = 0, j;
 va_start(args, format);
-while (format[j])
-{
-i = 0;
 while (prints[i].c != NULL)
 {
-if (*prints[i].c == format[j])
+j = 0;
+while (format[j])
+{
+if (prints[i].c[0] == format[j])
 {
 prints[i].f(args);
+if (j < strlen(format) - 1)
+printf(", ");
 }
 j++;
 }
