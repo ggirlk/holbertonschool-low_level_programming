@@ -28,9 +28,9 @@ return (printf("%d", va_arg(args, int)));
 int print_string(va_list args)
 {
 char *str = va_arg(args, char *);
-if (str)
-return (printf("%s", str));
-else
+if (!str)
+str = "(nil)";
+
 return (printf("(nil)"));
 }
 /**
@@ -52,7 +52,6 @@ return (printf("%f", va_arg(args, double)));
 void print_all(const char * const format, ...)
 {
 va_list args;
-int (*p)(va_list);
 _print prints[] = {
 {"c", print_char},
 {"i", print_int},
@@ -62,15 +61,14 @@ _print prints[] = {
 };
 unsigned int i = 0, j;
 va_start(args, format);
-while (prints[i].c != NULL)
-{
-j = 0;
 while (format[j])
+{
+i = 0;
+while (prints[i].c != NULL)
 {
 if (*prints[i].c == format[j])
 {
-p = prints[i].f;
-p(args);
+prints[i].f(args);
 }
 j++;
 }
