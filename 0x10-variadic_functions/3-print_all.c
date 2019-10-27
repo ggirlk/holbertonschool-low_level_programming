@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <string.h>
 #include "variadic_functions.h"
 /**
  * print_all - prints anything
@@ -8,22 +9,35 @@
  *
  * Return: nothing
  */
-void print_all
+int count(const char *format);
+void print_all(const char * const format, ...)
 {
-unsigned int i;
+//unsigned int n;
+
 va_list args;
-if (n == 0 || separator == NULL)
-return;
-va_start(args, n);
-for (i = 0; i < n; i++)
-{
-if (va_arg(args, char *) == NULL)
-printf("(nile)");
-else
+//const char *str = NULL;
+//n = count(format);
+va_start(args, format);
+
 printf("%s", va_arg(args, char *));
-if (i < n - 1)
-printf("%s", separator);
-}
+
 printf("\n");
 va_end(args);
+}
+int count(const char *format)
+{
+int i = 0, j = 0, n = 0;
+char *arf = "cnfi";
+while (format[i] != '\0')
+{
+j = 0;
+while (arf[j] != '\0')
+{
+if (arf[j] == format[i])
+n++;
+j++;
+}
+i++;
+}
+return (n);
 }

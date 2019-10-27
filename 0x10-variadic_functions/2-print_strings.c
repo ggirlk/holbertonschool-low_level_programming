@@ -21,7 +21,7 @@ for (i = 0; i < n; i++)
 {
 str = va_arg(args, const char *);
 if (!str)
-printf("(nile)");
+printf("(nil)");
 else
 printf("%s", str);
 if (i < n - 1)
