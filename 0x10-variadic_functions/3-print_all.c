@@ -27,7 +27,7 @@ return (printf("%d", va_arg(args, int)));
  */
 int print_string(va_list args)
 {
-char *str = va_arg(args, char *);
+const char *str = va_arg(args, char *);
 if (!str)
 str = "(nil)";
 
@@ -68,12 +68,11 @@ while (prints[i].c != NULL)
 if (prints[i].c[0] == format[j])
 {
 prints[i].f(args);
-if (i < strlen(format) - 1)
 printf(", ");
 }
-j++;
-}
 i++;
+}
+j++;
 }
 printf("\n");
 va_end(args);
