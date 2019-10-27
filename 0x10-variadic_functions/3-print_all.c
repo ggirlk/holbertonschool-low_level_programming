@@ -60,15 +60,15 @@ _print prints[] = {
 };
 unsigned int i = 0, j;
 va_start(args, format);
-while (prints[i].c != NULL)
+while (format && format[j])
 {
-j = 0;
-while (format[j])
+i = 0;
+while (prints[i].c != NULL)
 {
 if (prints[i].c[0] == format[j])
 {
 prints[i].f(args);
-if (j < strlen(format) - 1)
+if (i < strlen(format) - 1)
 printf(", ");
 }
 j++;
