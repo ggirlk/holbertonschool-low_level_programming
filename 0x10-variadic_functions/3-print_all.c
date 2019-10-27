@@ -58,7 +58,7 @@ _print prints[] = {
 {"f", print_float},
 {NULL, NULL}
 };
-unsigned int i = 0, j;
+unsigned int i = 0, j, k = strlen(format) - 1;
 va_start(args, format);
 while (format && format[j])
 {
@@ -68,6 +68,7 @@ while (prints[i].c != NULL)
 if (prints[i].c[0] == format[j])
 {
 prints[i].f(args);
+if (j < k)
 printf(", ");
 }
 i++;

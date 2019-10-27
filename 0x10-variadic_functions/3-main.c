@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("ceiss", 'H', 0, "lberton", "khouloud");
+    print_all("ceiss", 'H', 0, "lberton", '\0');
     return (0);
 }
