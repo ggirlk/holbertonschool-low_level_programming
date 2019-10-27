@@ -6,40 +6,40 @@
  * @args: list of args
  * Return: int
  */
-int print_char(va_list args)
+int print_char(va_list args, char *sp)
 {
-return (printf("%c", va_arg(args, int)));
+return (printf("%s%c", sp, va_arg(args, int)));
 }
 /**
  * print_int - print int
  * @args: list of args
  * Return: int
  */
-int print_int(va_list args)
+int print_int(va_list args, char *sp)
 {
-return (printf("%d", va_arg(args, int)));
+return (printf("%s%d", sp, va_arg(args, int)));
 }
 /**
  * print_string - print string
  * @args: list of args
  * Return: int
  */
-int print_string(va_list args)
+int print_string(va_list args, char *sp)
 {
 const char *str = va_arg(args, char *);
 if (!str)
 str = "(nil)";
 
-return (printf("%s", str));
+return (printf("%s%s", sp, str));
 }
 /**
  * print_float - print float
  * @args: list of args
  * Return: int
  */
-int print_float(va_list args)
+int print_float(va_list args, char *sp)
 {
-return (printf("%f", va_arg(args, double)));
+return (printf("%s%f", sp, va_arg(args, double)));
 }
 /**
  * print_all - prints anything
@@ -58,16 +58,17 @@ _print prints[] = {
 {NULL, NULL}
 };
 unsigned int i = 0, j;
+char *sp = "";
 va_start(args, format);
 while (format && format[j])
 {
 i = 0;
-while (prints[i].c != NULL)
+while (prints[i].c)
 {
-if (prints[i].c[0] == format[j])
+if (*prints[i].c == format[j])
 {
-prints[i].f(args);
-printf(", ");
+prints[i].f(args, sp);
+sp = ", ";
 }
 i++;
 }

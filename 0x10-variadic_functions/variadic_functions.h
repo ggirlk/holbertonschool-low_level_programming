@@ -13,7 +13,7 @@ void print_strings(const char *separator, const unsigned int n, ...);
 typedef struct _print
 {
 char *c;
-int (*f)(va_list args);
+int (*f)(va_list args, char *);
 } _print;
 void print_all(const char * const format, ...);
 #endif
