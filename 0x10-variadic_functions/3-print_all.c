@@ -67,7 +67,6 @@ while (prints[i].c != NULL)
 if (prints[i].c[0] == format[j])
 {
 prints[i].f(args);
-if (format[j + 1])
 printf(", ");
 }
 i++;
