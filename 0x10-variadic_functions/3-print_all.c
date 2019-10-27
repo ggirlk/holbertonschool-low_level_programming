@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <string.h>
 #include "variadic_functions.h"
 /**
  * print_char - print char
@@ -58,7 +57,7 @@ _print prints[] = {
 {"f", print_float},
 {NULL, NULL}
 };
-unsigned int i = 0, j, k = strlen(format) - 1;
+unsigned int i = 0, j;
 va_start(args, format);
 while (format && format[j])
 {
@@ -68,7 +67,7 @@ while (prints[i].c != NULL)
 if (prints[i].c[0] == format[j])
 {
 prints[i].f(args);
-if (j < k)
+if (format[j + 1])
 printf(", ");
 }
 i++;
