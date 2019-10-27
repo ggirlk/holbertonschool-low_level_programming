@@ -2,14 +2,29 @@
 #include <stdarg.h>
 #include <string.h>
 #include "variadic_functions.h"
+/**
+ * print_char - print char
+ * @args: list of args
+ * return: int
+ */
 int print_char(va_list args)
 {
 return (printf("%c", va_arg(args, int)));
 }
+/**
+ * print_char - print int
+ * @args: list of args
+ * return: int
+ */
 int print_int(va_list args)
 {
 return (printf("%d", va_arg(args, int)));
 }
+/**
+ * print_char - print string
+ * @args: list of args
+ * return: int
+ */
 int print_string(va_list args)
 {
 char *str = va_arg(args, char *);
@@ -18,6 +33,11 @@ return (printf("%s", str));
 else
 return (printf("(nil)"));
 }
+/**
+ * print_char - print float
+ * @args: list of args
+ * return: int
+ */
 int print_float(va_list args)
 {
 return (printf("%f", va_arg(args, double)));
@@ -41,7 +61,6 @@ _print prints[] = {
 {NULL, NULL}
 };
 unsigned int i = 0, j;
-char *separator = ", ";
 va_start(args, format);
 while (prints[i].c != NULL)
 {
@@ -52,8 +71,6 @@ if (*prints[i].c == format[j])
 {
 p = prints[i].f;
 p(args);
-if (j < strlen(format) - 1)
-printf("%s", separator);
 }
 j++;
 }
