@@ -4,10 +4,11 @@
 /**
  * struct list_t - linked list
  * @str: string
- * @l: length of str
+ * @len: length of str
  * @next: pointer to the next node
  */
-typedef struct list_t {
+typedef struct list_t
+{
 char *str;
 unsigned int len;
 struct list_t *next;
