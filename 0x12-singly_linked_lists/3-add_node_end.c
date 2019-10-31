@@ -14,6 +14,8 @@ list_t *add_node_end(list_t **head, const char *str)
 list_t *h;
 list_t *h2;
 char *s = strdup(str);
+if (head == NULL)
+return (NULL);
 h = malloc(sizeof(list_t));
 if (h == NULL)
 return (NULL);
@@ -36,7 +38,7 @@ return (h);
  * @s: string
  * Return: string length.
  */
-int _strlen(char *s)
+size_t _strlen(char *s)
 {
 int i = 0;
 while (s[i])
