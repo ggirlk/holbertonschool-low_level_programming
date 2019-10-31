@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * void free_list - frees a list
+ * free_list - frees a list
  * @head: list
  *
  * Return: nothing.
