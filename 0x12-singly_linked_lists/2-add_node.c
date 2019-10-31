@@ -5,13 +5,14 @@
 
 /**
  * print_list - prints all the elements of a list_t list.
- * @h: list
- * Return: number of nodes.
+ * @head: list
+ * @str: string
+ * Return: node.
  */
 list_t *add_node(list_t **head, const char *str)
 {
 list_t *h;
-char *s = (char *)str;
+char *s = strdup(str);
 h = malloc(sizeof(list_t));
 if (h == NULL)
 return (NULL);
