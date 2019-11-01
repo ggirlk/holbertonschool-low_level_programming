@@ -16,12 +16,12 @@ char *s;
 if (head == NULL)
 return (NULL);
 h = malloc(sizeof(list_t));
-if (h == NULL)
+s = strdup(str);
+if (h == NULL || !s)
 {
 free(h);
 return (NULL);
 }
-s = strdup(str);
 h->len = _strlen(s);
 h->str = s;
 h->next = *head;
