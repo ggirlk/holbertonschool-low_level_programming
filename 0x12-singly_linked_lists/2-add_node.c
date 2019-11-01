@@ -17,7 +17,10 @@ if (head == NULL)
 return (NULL);
 h = malloc(sizeof(list_t));
 if (h == NULL)
+{
+free(h);
 return (NULL);
+}
 s = strdup(str);
 h->len = _strlen(s);
 h->str = s;
