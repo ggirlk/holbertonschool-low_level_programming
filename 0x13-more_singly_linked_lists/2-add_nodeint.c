@@ -5,8 +5,9 @@
 
 /**
  * add_nodeint - adds a new node at the beginning.
- * @h: list
- * Return: number of nodes.
+ * @head: list
+ * @n: integer
+ * Return: new node.
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
