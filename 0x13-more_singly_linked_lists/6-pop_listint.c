@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * pop_listint - free list
+ * pop_listint - deletes the head node
  * @head: list
  *
  * Return: int.
