@@ -9,22 +9,38 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int i = 0, j = 0, r = 0;
+unsigned int i = 0, j = 0, k = 0, r = 0;
 char stTemp[2];
 if (b == NULL)
 return (0);
+k = _strlen((char *)b) - 1;
+
 while (b[i])
 {
 if (_isalpha(b[i]) != 0)
 return (0);
-sprintf(stTemp, "%c", b[i]);
+stTemp[0] = b[i];
 j = atoi(stTemp);
-r += (j *_pow_recursion(2, i));
+r += (j *_pow_recursion(2, k));
 i++;
+k--;
 }
 return (r);
 }
-
+/**
+ * _strlen - count sting length.
+ * @s: string
+ * Return: string length.
+ */
+int _strlen(char *s)
+{
+int i = 0;
+while (s[i])
+{
+i++;
+}
+return (i);
+}
 /**
  * _pow_recursion - returns the value of x raised to the power of y.
  * @x: number
