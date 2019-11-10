@@ -9,7 +9,7 @@
  */
 void print_binary(unsigned long int n)
 {
-int i = 32, k = 0, tst = 0;
+int i = 64, k = 0, tst = 0;
 if (n == 0)
 _putchar('0');
 while (i--)
