@@ -3,23 +3,22 @@
 #include "holberton.h"
 
 /**
- * binary_to_uint - converts a binary number to an unsigned int.
+ * print_binary - print binary.
  * @n: int
  * Return: nothing.
  */
 void print_binary(unsigned long int n)
 {
-int k = 0;
+int i = 32, k = 0;
 if (n == 0)
 _putchar('0');
-while (n)
+while (i--)
 {
-k = n & 1;
-n = n >> 1;
-if (k == 0)
-_putchar('0');
-else
+k = n >> i;
+if (k & 1)
 _putchar('1');
+else
+_putchar('0');
 }
 }
 
