@@ -15,7 +15,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 int f;
 size_t i = 0, k;
 char s;
-if (filename == NULL)
+if (filename == NULL && !letters)
 return (0);
 f = open(filename, O_RDONLY, 0);
 if (f == 0)
@@ -25,8 +25,9 @@ for (i = 0; i < letters; i++)
 k = read(f, &s, 1);
 if (k == 0)
 break;
-write(1, &s, 1);
+write(STDOUT_FILENO, &s, 1);
 i++;
 }
+f = close(f);
 return (i);
 }
