@@ -32,6 +32,8 @@ if (k == -1)
 return (0);
 i++;
 }
+if (i < letters)
+return (0);
 f = close(f);
 return (i);
 }
