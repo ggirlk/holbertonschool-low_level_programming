@@ -19,7 +19,7 @@ if (argc < 3)
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
-mod =  S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+mod =  0664;
 f1 = open(argv[1], O_RDONLY);
 f2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, mod);
 while ((k1 = read(f1, s, 1024)))
