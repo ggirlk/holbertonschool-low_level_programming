@@ -20,7 +20,7 @@ if (filename == NULL)
 return (-1);
 if (text_content == NULL)
 return (1);
-f = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+f = open(filename, O_RDWR | O_CREAT | O_APPEND | O_TRUNC, S_IRUSR | S_IWUSR);
 if (f == -1)
 return (-1);
 for (i = 0; text_content[i] != '\0'; i++)
