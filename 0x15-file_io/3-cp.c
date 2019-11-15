@@ -12,16 +12,15 @@
  */
 int main(int argc, const char **argv)
 {
-int f1, f2, k1, k2, mod;
+int f1, f2, k1, k2;
 char s[1024];
 if (argc < 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
-mod =  0664;
 f1 = open(argv[1], O_RDONLY);
-f2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, mod);
+f2 = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
 while ((k1 = read(f1, s, 1024)))
 {
 if (k1 == 0)
