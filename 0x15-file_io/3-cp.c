@@ -5,36 +5,44 @@
 #include "holberton.h"
 
 /**
- * create_file - creates a file.
- * @filename: file name
- * @text_content: NULL terminated string to write to the file
+ * main - copy file to file.
+ * @argc: length of argv
+ * @argv: vector argument
  * Return: int
  */
-int create_file(const char *filename, char *text_content)
+int main(int argc, char **argv)
 {
-int f, k;
-size_t i = 0;
-char s;
-if (filename == NULL)
-return (-1);
-
-f = open(filename, O_RDWR | O_CREAT | O_APPEND | O_TRUNC, S_IRUSR | S_IWUSR);
-if (text_content == NULL)
+int f1, f2, k1, k2;
+char *s;
+if (argc < 3)
 {
-if (f == -1)
-return (-1);
-else
-return (1);
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+exit(97);
 }
-if (f == -1)
+s = malloc(1024);
+if (!s)
 return (-1);
-for (i = 0; text_content[i] != '\0'; i++)
+f1 = open(argv[1], O_RDONLY);
+f2 = open(argv[2], O_RDWR | O_CREAT | O_APPEND | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+k1 = read(f1, s, 1024);
+if (f1 == -1 && k1 == -1)
 {
-s = text_content[i];
-k = write(f, &s, 1);
-if (k == -1)
-return (-1);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+exit(98);
 }
-f = close(f);
-return (1);
+k2 = write(f2, s, 1024);
+if (f2 == -1 && k2 == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+exit(99);
+}
+k1 = close(f1);
+k2 = close(f2);
+free(s);
+if (k1 == -1 && k2 == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", (k1 == -1) ? f1 : f2);
+exit(100);
+}
+return (0);
 }
