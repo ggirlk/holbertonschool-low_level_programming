@@ -17,16 +17,17 @@ size_t i = 0;
 char s;
 if (filename == NULL)
 return (-1);
-if (text_content == NULL)
-return (-1);
+
 f = open(filename, O_RDWR | O_CREAT | O_APPEND | O_TRUNC, S_IRUSR | S_IWUSR);
-if (f == -1)
+if (text_content == NULL)
 {
-if (open(filename, O_RDWR) != -1)
-return (1);
-else
+if (f == -1)
 return (-1);
+else
+return (1);
 }
+if (f == -1)
+return (-1);
 for (i = 0; text_content[i] != '\0'; i++)
 {
 s = text_content[i];
