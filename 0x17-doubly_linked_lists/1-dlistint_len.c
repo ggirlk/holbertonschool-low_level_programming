@@ -14,7 +14,7 @@ size_t i = 0;
 dlistint_t *nh, *tmp;
 nh = malloc(sizeof(dlistint_t));
 tmp = malloc(sizeof(dlistint_t));
-if (nh == NULL && tmp == NULL)
+if ((nh == NULL && tmp == NULL) || h == NULL)
 {
 free(nh);
 free(tmp);
