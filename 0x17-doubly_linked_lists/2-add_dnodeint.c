@@ -20,9 +20,10 @@ return (0);
 }
 
 nh->n = n;
-nh->next = NULL;
-nh->prev = *head;
-*head = nh->next;
-
+nh->next = (*head);
+nh->prev = NULL;
+if ((*head) != NULL)
+(*head)->prev = nh;
+(*head) = nh;
 return (*head);
 }
