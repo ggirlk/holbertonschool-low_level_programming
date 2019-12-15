@@ -31,7 +31,5 @@ tmp->next = nh;
 tmp->prev = tmp->prev;
 i++;
 }
-free(tmp);
-free(nh);
 return (i);
 }
