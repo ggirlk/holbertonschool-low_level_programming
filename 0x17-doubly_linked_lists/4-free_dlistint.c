@@ -22,4 +22,5 @@ h = head;
 head = head->next;
 free(h);
 }
+free(head);
 }
