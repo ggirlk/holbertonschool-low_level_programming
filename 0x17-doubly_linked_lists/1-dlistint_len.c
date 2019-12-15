@@ -4,11 +4,11 @@
 #include "lists.h"
 
 /**
- * print_dlistint - prints all the elements.
+ * dlistint_len - returns the number of elements.
  * @h: head node
  * Return: number of nodes.
  */
-size_t print_dlistint(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 size_t i = 0;
 dlistint_t *nh, *tmp;
@@ -27,7 +27,6 @@ while (nh != NULL)
 {
 tmp = nh;
 nh = tmp->next;
-printf("%d\n", tmp->n);
 tmp->next = nh;
 tmp->prev = tmp->prev;
 i++;
