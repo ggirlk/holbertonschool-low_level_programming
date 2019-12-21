@@ -7,12 +7,12 @@
  * free_dlistint - free list.
  * @head: head node
  *
- * Return: list.
+ * Return: nothing.
  */
 void free_dlistint(dlistint_t *head)
 {
 dlistint_t *h;
-while (head != NULL)
+while (head)
 {
 h = head;
 head = h->next;
