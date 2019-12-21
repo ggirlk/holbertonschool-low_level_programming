@@ -16,11 +16,13 @@ if (head == NULL)
 {
 return;
 }
-while (head->next != NULL)
+while (head != NULL)
 {
-h = head;
-head = head->next;
+h = head->next;
+if (h == NULL)
+return;
+head = h->next;
+h->prev = NULL;
 free(h);
 }
-free(head);
 }
