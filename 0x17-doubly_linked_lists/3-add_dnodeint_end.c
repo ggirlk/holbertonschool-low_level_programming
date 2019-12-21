@@ -18,7 +18,7 @@ if (nh == NULL || l == NULL || head == NULL)
 {
 free(l);
 free(nh);
-return (0);
+return (NULL);
 }
 l = *head;
 nh->n = n;
@@ -27,12 +27,13 @@ if ((*head) == NULL)
 {
 nh->prev = NULL;
 (*head) = nh;
-return (*head);
+return (nh);
 }
 while (l->next != NULL)
 l = l->next;
 
 l->next = nh;
 l->prev = nh;
-return (l);
+
+return (nh);
 }
