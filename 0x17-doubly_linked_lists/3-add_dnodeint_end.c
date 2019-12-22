@@ -33,7 +33,7 @@ while (l->next != NULL)
 l = l->next;
 
 l->next = nh;
-l->prev = nh;
+l->prev = (*head);
 
 return (nh);
 }
