@@ -16,24 +16,21 @@ nh = malloc(sizeof(dlistint_t));
 l = malloc(sizeof(dlistint_t));
 if (nh == NULL || l == NULL)
 {
-free(l);
-free(nh);
 return (NULL);
 }
-l = *head;
 nh->n = n;
 nh->next = NULL;
-if ((*head) == NULL)
+if (*head == NULL)
 {
 nh->prev = NULL;
-(*head) = nh;
+*head = nh;
 return (*head);
 }
+l = *head;
 while (l->next != NULL)
 l = l->next;
 
 l->next = nh;
-l->prev = nh;
-
+l->prev = *head;
 return (l);
 }
