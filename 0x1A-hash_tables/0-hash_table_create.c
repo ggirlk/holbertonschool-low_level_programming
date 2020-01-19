@@ -14,6 +14,7 @@ hash_table_t *arr;
 arr = malloc(sizeof(hash_table_t));
 if (arr == NULL || size == 0)
 {
+free(arr);
 return (NULL);
 }
 arr->size = size;
