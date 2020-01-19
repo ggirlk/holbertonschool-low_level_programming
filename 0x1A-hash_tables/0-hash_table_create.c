@@ -18,6 +18,12 @@ free(arr);
 return (NULL);
 }
 arr->size = size;
-arr->array = NULL;
+arr->array = malloc(sizeof(hash_node_t));
+if (arr->array == NULL)
+{
+free(arr->array);
+free(arr);
+return (NULL);
+}
 return (arr);
 }
