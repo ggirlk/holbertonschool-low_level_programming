@@ -25,5 +25,6 @@ free(arr->array);
 free(arr);
 return (NULL);
 }
+arr->array = NULL;
 return (arr);
 }
