@@ -1,19 +1,17 @@
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
  * free_dlistint - free list.
  * @head: head node
  *
- * Return: list.
+ * Return: nothing.
  */
 void free_dlistint(dlistint_t *head)
 {
-dlistint_t *h;
-if (head == NULL)
+if (head)
 {
+<<<<<<< HEAD
 return;
 }
 while (head != NULL)
@@ -23,5 +21,10 @@ free(h);
 if (h == NULL)
 return;
 head = h;
+}
+=======
+free_dlistint(head->next);
+free(head);
+>>>>>>> bb8fda5e88f90beaf5345932afbd0850113e058d
 }
 }
