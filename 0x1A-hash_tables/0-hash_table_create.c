@@ -11,8 +11,12 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 hash_table_t *arr;
+long int i = size;
 arr = malloc(sizeof(hash_table_t));
-if (arr == NULL || size == 0)
+/*if (i <= 0)
+size = size * -1;
+*/
+if (arr == NULL || i <= 0)
 {
 free(arr);
 return (NULL);
