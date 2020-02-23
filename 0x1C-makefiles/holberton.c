@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include"holberton.h"
+#include"m.h"
 /**
  * holberton - show see horce
  *
